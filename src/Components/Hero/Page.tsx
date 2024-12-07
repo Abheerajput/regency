@@ -11,26 +11,26 @@ import vector4 from "../../../public/assets/svg/Legally.svg";
 
 const Hero: React.FC = () => {
   return (
-    <div className="xs:px-[3%] sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[8%]  bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
-        <div className="w-full flex xs:flex-col justify-between gap-4 xs:px-4 py-6">
+    <div className="xs:px-[3%] xl:pt-[5rem] py-6 xl:pb-[0rem] sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[8%]  bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
+        <div className="w-full flex xs:flex-col justify-between gap-4 pb-8 xs:px-4  ">
       {/* Left Section */}
-      <div className="w-[50%] xs:w-full content-center">
+      <div className="w-[50%] xs:w-full ">
         <div className="relative">
-          <h1 className="lg:text-[50px] xl:text-[50px] md:text-[40px] sm:text-[35px] xs:text-[30px] font-inter font-bold text-[#191A15]">
+          <h1 className="lg:text-[50px] xl:text-[64px]  md:text-[40px] sm:text-[35px] xs:text-[30px] font-inter font-bold text-[#191A15]">
             Plan Your <br className="hidden md:flex lg:flex xl:flex" /> Legacy,
             Securely and Easily
           </h1>
           <Image src={img1} alt="Vector Decoration" />
         </div>
-        <p className="font-inter py-4 font-normal text-[18px]">
-          Create a legally-binding will in minutes, guided by experts and stored
+        <p className="font-inter py-4 font-medium xl:text-[20] text-[18px]">
+          Create a legally-binding will in minutes, guided  <br  className="hidden lg:flex xl:flex"/> by experts and stored
           securely.
         </p>
-        <div className="flex gap-6 items-center">
-          <button className="bg-[#54BD95] px-5 py-3 font-inter text-white rounded-3xl">
+        <div className="flex xl:pt-12 gap-6 items-center">
+          <button className="bg-[#54BD95] xl:text-[18px] font-medium px-5 py-3 font-inter text-white rounded-3xl">
             Start My Will
           </button>
-          <button className="flex gap-4 font-inter items-center">
+          <button className="flex gap-4 text-[#191A15] xl:text-[18px] font-medium font-inter items-center">
             <Image src={img2} alt="Music Icon" />
             Learn More
           </button>
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
       {/* Right Section */}
       <div className="w-[50%] flex xs:justify-center xs:w-full justify-end">
         <div className="relative xs:w-[80%]">
-          <Image src={img3} alt="Hero Image" className="xs:w-full" />
+          <Image src={img3} alt="Hero Image" className="xs:w-full rounded-md " />
           <Image
             src={vector1}
             alt="Protect Your Icon"

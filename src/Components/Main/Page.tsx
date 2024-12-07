@@ -7,18 +7,19 @@ import Companies from '../Companies/Page';
 import Will from '../Will/Page';
 import Platform from '../Platform/Page';
 import Plans from '../Plans/Page';
-
+import Review from "../Review/Page"
+import Footer from "../Footer/Page"
 const Main: React.FC = () => {
   return (
     <>
-      <div className="">
         <Navbar />
         <Hero />
-      </div>
       <Companies  />
       <Will />
       <Platform />
       <Plans />
+      <Review/>
+      <Footer/>
     </>
   );
 };

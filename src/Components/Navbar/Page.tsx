@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import logo from '../../../public/assets/svg/Navbarlogo.svg';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,10 +14,13 @@ const Navbar: React.FC = () => {
 
   return (
     <div className='bg-gradient-to-r  from-[#FAF1DF] to-[#E2F3EB] xs:px-[3%] sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[8%] '>
-          <div className="flex w-full xs:flex-col py-4 items-center justify-between">
+          <div className="flex w-full xs:flex-col py-4 xl:py-7 items-center justify-between">
       {/* Logo */}
       <div className="max-w-[30%] sm:min-w-[10%] xs:items-center xs:mb-3 flex justify-between xs:min-w-[100%]">
+        <Link href="/">
+        
         <Image src={logo} alt="Logo" className="md:w-2/3 sm:w-2/3" />
+        </Link>
         {/* Hamburger Menu Icon */}
         <div className="xs:block hidden">
           <button onClick={toggleMenu}>
@@ -53,9 +57,12 @@ const Navbar: React.FC = () => {
           <li className="text-[#898989] font-inter font-semibold hover:text-black">
             Legal Services
           </li>
+          <Link href="/signup">
           <button className="px-4 sm:px-3 md:px-3 md:py-1 sm:py-1 rounded-3xl py-3 bg-[#54BD95] font-inter text-white font-semibold">
             Get Started
           </button>
+                    </Link>
+         
         </ul>
       </div>
     </div>

@@ -14,8 +14,8 @@ export default {
         'xs': {'min': '318px', 'max': '768.99px'},
         'sm': {'min': '769px', 'max': '1024.99px'}, 
         'md': {'min': '1025px', 'max': '1280.99px'},
-        'lg': {'min': '1281px', 'max': '1536.99px'}, 
-        'xl': {'min': '1537px'}, 
+        'lg': {'min': '1281px', 'max': '1438.99px'}, 
+        'xl': {'min': '1439.99px'}, 
        
       },
       fontFamily: {
