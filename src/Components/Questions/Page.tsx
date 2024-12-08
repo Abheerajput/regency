@@ -67,21 +67,23 @@ const Page: React.FC = () => {
   };
 
   return (
-    <div className="flex py-6 justify-center items-center xl:pb-6  bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
+    <div className="flex py-6 xs:px-4 justify-center items-center w-full  bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
       {step === 1 && (
-        <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
-          <div className="max-w-[580px] flex flex-col gap-6">
+        
+          <div className="flex justify-center xs:min-w-full w-full items-center ">
+        <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-2 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
+        
             <h1 className="flex gap-2 text-[20px] font-inter font-medium">
               <Image src={arrow} alt="" /> Back
             </h1>
-            <p className="text-[30px] font-bold font-inter text-[#191A15]">
-              Answer 4 simple questions to create your personalized will.
+            <p className="text-[30px] xs:text-[23px] font-bold xs:py-4 font-inter text-[#191A15]">
+            Answer 4 simple questions to create your personalized will.
             </p>
             <div className="w-full flex justify-end">
               <button
                 type="button"
                 onClick={() => setStep(2)} // Set step to 2 when clicked
-                className="bg-[#54BD95] font-inter text-[18px] text-white font-medium py-4 px-6 rounded-full"
+                className="bg-[#54BD95] xs:text-[13px] font-inter text-[18px] xs:py-2 xs:px-4 text-white font-medium py-4 px-6 rounded-full"
               >
                 Let's get started
               </button>
@@ -91,9 +93,9 @@ const Page: React.FC = () => {
       )}
 
       {step === 2 && (
-        <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
-          <div className="max-w-[580px] flex flex-col gap-6" onKeyDown={handleKeyPress} tabIndex={0}>
-            <div className="flex justify-between">
+        <div className="flex justify-center xs:min-w-full w-full items-center ">
+        <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-2 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
+        <div className="flex justify-between">
             <h1
           className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
           onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
@@ -103,10 +105,10 @@ const Page: React.FC = () => {
               <h3 className="text-[20px] font-inter font-medium">Question {step - 1} of 4</h3>
               </div>
 
-            <p className="text-[30px] font-bold font-inter text-[#191A15]">
+              <p className="text-[30px] xs:text-[23px] font-bold xs:py-4 font-inter text-[#191A15]">
               What is your current relationship status?
             </p>
-            <div className="p-4 flex  flex-col gap-4">
+            <div className=" flex  flex-col gap-4">
               {options.map((option) => (
                 <label
                   key={option.id}
@@ -135,10 +137,10 @@ const Page: React.FC = () => {
       )}
 
       {step === 3 && (
-         <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
-         <div className="max-w-[580px] min-w-[570px] flex flex-col gap-6" onKeyDown={handleKeyPress} tabIndex={0}>
-           <div className="flex justify-between">
-           <h1
+        <div className="flex justify-center xs:min-w-full w-full items-center ">
+        <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-2 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
+        <div className="flex justify-between">
+            <h1
           className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
           onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
         >
@@ -147,9 +149,9 @@ const Page: React.FC = () => {
              <h3 className="text-[20px] font-inter font-medium">Question {step - 1} of 4</h3>
              </div>
 
-           <p className="text-[30px] font-bold font-inter text-[#191A15]">
-           How old are you?           </p>
-           <div className="p-4 flex flex-col gap-4">
+             <p className="text-[30px] xs:text-[23px] font-bold xs:py-4 font-inter text-[#191A15]">
+             How old are you?           </p>
+           <div className=" flex flex-col gap-4">
              {secondaryOptions.map((option) => (
                <label
                  key={option.id}
@@ -178,10 +180,10 @@ const Page: React.FC = () => {
       )}
 
 {step === 4 && (
-         <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
-         <div className="max-w-[580px] min-w-[570px] flex flex-col gap-6" onKeyDown={handleKeyPress} tabIndex={0}>
-           <div className="flex justify-between">
-           <h1
+        <div className="flex justify-center xs:min-w-full w-full items-center ">
+        <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-2 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
+        <div className="flex justify-between">
+            <h1
           className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
           onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
         >
@@ -190,10 +192,10 @@ const Page: React.FC = () => {
              <h3 className="text-[20px] font-inter font-medium">Question {step - 1} of 4</h3>
              </div>
 
-           <p className="text-[30px] font-bold font-inter text-[#191A15]">
-           Do you have children or financial 
+             <p className="text-[30px] xs:text-[23px] font-bold xs:py-4 font-inter text-[#191A15]">
+             Do you have children or financial 
            dependents?          </p>
-           <div className="p-4 flex flex-col gap-4">
+           <div className=" flex flex-col gap-4">
              {thirdOption.map((option) => (
                <label
                  key={option.id}
@@ -217,10 +219,10 @@ const Page: React.FC = () => {
 
 
 {step === 5 && (
-         <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
-         <div className="max-w-[580px] min-w-[570px] flex flex-col gap-6" onKeyDown={handleKeyPress} tabIndex={0}>
-           <div className="flex justify-between">
-           <h1
+         <div className="flex justify-center xs:min-w-full w-full items-center ">
+        <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-2 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
+        <div className="flex justify-between">
+             <h1
           className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
           onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
         >
@@ -230,10 +232,10 @@ const Page: React.FC = () => {
              <h3 className="text-[20px] font-inter font-medium">Question {step - 1} of 4</h3>
              </div>
 
-           <p className="text-[30px] font-bold font-inter text-[#191A15]">
-           What is the estimated value of 
+             <p className="text-[30px] xs:text-[23px] font-bold xs:py-4 font-inter text-[#191A15]">
+             What is the estimated value of 
            your <span className='text-[#69C5A1] border-[#69C5A1] border-b-2 border-2 border-t-0 border-l-0 border-r-0 '>net assets?  </span>             </p>
-           <div className="p-4 flex flex-col gap-4">
+           <div className=" flex flex-col gap-4">
              {assets.map((option) => (
                <label
                  key={option.id}
@@ -262,18 +264,18 @@ const Page: React.FC = () => {
       )}
 
 {step === 6 && (
-         <div className="flex justify-center items-center rounded-xl shadow-xl py-8 px-8 bg-white">
-      <div className="max-w-[580px] min-w-[570px]">
-      <div className="flex justify-between">
-      <h1
+          <div className="flex justify-center xs:min-w-full w-full items-center ">
+        <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-2 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
+        <div className="flex justify-between">
+              <h1
           className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
           onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
         >
                <Image src={arrow} alt="" /> Back
              </h1>
              </div>
-        <p className="text-[30px] py-6 font-bold font-inter text-[#191A15]">
-        Your Tailored Plan    </p>
+             <p className="text-[30px] xs:text-[23px] font-bold xs:py-4 font-inter text-[#191A15]">
+             Your Tailored Plan    </p>
         <div className="flex flex-col pb-2 gap-4">
           {tailored.map((option) => (
             <div
@@ -287,8 +289,8 @@ const Page: React.FC = () => {
                 ) : (
                   <Image src={option.icon} alt={option.label} width={28} height={28} />
                 )}                <div>
-                  <h2 className="text-[25px] font-inter font-semibold text-gray-900">{option.label}</h2>
-                  <p className="text-[16px] font-inter text-[#7C7C7C]">{option.description}</p>
+                  <h2 className="text-[25px] xs:text-[18px] font-inter font-semibold text-gray-900">{option.label}</h2>
+                  <p className="text-[16px] xs:text-[14px] font-inter text-[#7C7C7C]">{option.description}</p>
                 </div>
               </div>
               <span className="text-gray-400 text-xl"><IoIosArrowForward /></span>

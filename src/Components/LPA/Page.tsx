@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import arrow from '../../../public/assets/svg/Arrow.svg';
+import { GoDotFill } from "react-icons/go";
 
 const Page: React.FC = () => {
   const [step, setStep] = useState<number>(1); // Step to track the current visible section
@@ -60,21 +61,21 @@ const Page: React.FC = () => {
     }
   };
   return (
-    <div className="flex py-6 justify-center items-center  bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
+    <div className="flex py-6 xs:px-4 justify-center items-center w-full  bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
       {step === 1 && (
-        <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
-          <div className="max-w-[580px] flex flex-col gap-6">
-            <h1 className="flex gap-2 text-[20px] font-inter font-medium">
+        <div className="flex justify-center items-center rounded-xl shadow-xl xs:p-4 p-8 bg-white">
+          <div className="max-w-[580px] xs:max-w-full  flex flex-col gap-6">
+            <h1 className="flex xs:text-[15px] gap-2 text-[20px] font-inter font-medium">
               <Image src={arrow} alt="" /> Back
             </h1>
-            <p className="text-[30px] font-bold font-inter text-[#191A15]">
-              Complete Your Lasting Power of Attorney for Only £99
+            <p className="text-[30px] xs:text-[23px] font-bold xs:py-4 font-inter text-[#191A15]">
+            Complete Your Lasting Power of Attorney for Only £99
             </p>
             <div className="w-full flex justify-end">
               <button
                 type="button"
                 onClick={() => setStep(2)} // Set step to 2 when clicked
-                className="bg-[#54BD95] font-inter text-[18px] text-white font-medium py-4 px-6 rounded-full"
+                className="bg-[#54BD95] xs:text-[13px] xs:py-2 xs:px-4 font-inter text-[18px] text-white font-medium py-4 px-6 rounded-full"
               >
                 Start my LPA
               </button>
@@ -84,32 +85,27 @@ const Page: React.FC = () => {
       )}
 
       {step === 2 && (
-        <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
-          <div className="max-w-[580px] min-w-[570px] flex flex-col gap-6" tabIndex={0}>
+        <div className="flex justify-center xs:min-w-full w-full items-center ">
+          <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-0 gap-6 rounded-xl shadow-xl  xs:p-4 p-8 bg-white" tabIndex={0}>
             <div className="flex justify-between">
               <h1
-                className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+                className="flex gap-2  xs:text-[15px] text-[20px] font-inter font-medium cursor-pointer"
                 onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
               >
                 <Image src={arrow} alt="" /> Back
               </h1>
             </div>
 
-            <p className="text-[30px] font-bold font-inter text-[#191A15]">
-              Let's get started
+            <p className="text-[30px] xs:text-[23px] font-bold  xs:py-4 font-inter text-[#191A15]">
+            Let's get started
             </p>
 
             {/* Display form validation error */}
-            {formError && (
-              <div className="text-red-600 text-sm mb-4">
-                <p>{formError}</p>
-              </div>
-            )}
-
-            <div className="p-4 flex flex-col gap-4">
+           
+            <div className=" flex flex-col gap-4">
               {options.map((option) => (
                 <div key={option.id}>
-                  <span className="text-[16px] py-4 font-inter font-medium">{option.label}</span>
+                  <div className="text-[16px] xs:py-2 py-4 font-inter font-medium">{option.label}</div>
                   <label
                     className={`flex items-center rounded-lg gap-3 border ${
                       formData[option.name] ? 'border-green-300' : 'border-gray-300'
@@ -120,19 +116,24 @@ const Page: React.FC = () => {
                       type={option.type}
                       value={formData[option.name]} 
                       onChange={handleChange}
-                      className="w-full py-4 px-4 rounded-lg"
+                      className="w-full py-4 xs:py-3 xs:px-3 px-4 rounded-lg"
                       placeholder={option.label}
                     />
                   </label>
                 </div>
               ))}
+                  {formError && (
+              <div className="text-red-600 text-sm mb-4">
+                <p>{formError}</p>
+              </div>
+            )}
             </div>
 
             <div className="w-full flex justify-end">
               <button
                 type="button"
                 onClick={handleSubmit} // Use handleSubmit for form validation
-                className="bg-[#54BD95] font-inter text-[18px] text-white font-medium py-4 px-6 rounded-full"
+                className="bg-[#54BD95] xs:mt-4 xs:text-[13px] font-inter text-[18px] xs:py-2 xs:px-4 text-white font-medium py-4 px-6 rounded-full"
               >
                 Continue
               </button>
@@ -143,26 +144,26 @@ const Page: React.FC = () => {
 
       
 {step === 3 && (
-         <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
-         <div className="max-w-[580px] min-w-[570px] flex flex-col gap-6" onKeyDown={handleKeyPress} tabIndex={0}>
-           <div className="flex justify-between">
-           <h1
-          className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+        <div className="flex justify-center xs:min-w-full w-full items-center ">
+        <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-0 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
+          <div className="flex justify-between">
+            <h1
+          className="flex gap-2 text-[20px] xs:text-[15px] font-inter font-medium cursor-pointer"
           onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
         >
                <Image src={arrow} alt="" /> Back
              </h1>
              </div>
 
-           <p className="text-[30px] font-bold font-inter text-[#191A15]">
+           <p className="text-[30px] xs:text-[23px] font-bold xs:py-4 font-inter text-[#191A15]">
            Which type of LPA do you want 
            to make?        </p>
-           <div className="p-4 flex flex-col gap-4">
+           <div className=" flex flex-col  gap-4">
              {thirdOption.map((option) => (
                <label
                  key={option.id}
                  onClick={() => setSelectedOption(option.id)} // Select option on click
-                 className={`flex items-center px-4 gap-3 py-6 rounded-lg border ${
+                 className={`flex items-center px-4 xs:gap-1 gap-3 xs:py-3 py-6 rounded-lg border ${
                    selectedOption === option.id
                      ? '  border-green-300'
                      : 'border-gray-300'
@@ -175,6 +176,41 @@ const Page: React.FC = () => {
                </label>
              ))}
            </div>
+         </div>
+       </div>
+      )}
+
+{step === 4 && (
+       <div className="flex justify-center xs:min-w-full w-full items-center ">
+       <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-0 gap-6 rounded-xl  xs:p-4 p-8 shadow-xl  bg-white" tabIndex={0}>
+         <div className="flex justify-between">
+           <h1
+          className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+          onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
+        >
+               <Image src={arrow} alt="" /> Back
+             </h1>
+             </div>
+
+             <p className="text-[30px] xs:text-[23px] font-bold xs:py-4 font-inter text-[#191A15]">
+             Check if you have mental capacity      </p>
+           <div className=" ">
+           <ul className='flex flex-col gap-2 list-disc'>
+            <li className='text-[21px] flex  gap-2 items-center font-inter  text-[#666666] font-medium'> <GoDotFill  className='min-w-[20px] mt-[3px]'/>
+            must be 18 or over</li>
+            <li  className='text-[21px] flex gap-2 font-inter text-[#666666] font-medium'><GoDotFill className='min-w-[20px] mt-[7px]'/>
+            must be able to make their own decisions at the time their LPA is made – this is known as having mental capacity</li>
+            </ul>
+           </div>
+           <div className="w-full flex justify-end">
+              <button
+                type="button"
+                onClick={handleSubmit} // Use handleSubmit for form validation
+                className="bg-[#54BD95] xs:mt-4 xs:text-[13px] font-inter text-[18px] xs:py-2 xs:px-4 text-white font-medium py-4 px-6 rounded-full"
+              >
+                Continue
+              </button>
+            </div>
          </div>
        </div>
       )}
