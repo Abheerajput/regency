@@ -46,7 +46,10 @@ const Navbar: React.FC = () => {
             Will
           </li>
           <li className="text-[#898989] font-inter font-semibold hover:text-black">
+            <Link href="/lpa">
+            
             LPA
+            </Link>
           </li>
           <li className="text-[#898989] font-inter font-semibold hover:text-black">
             Trusts

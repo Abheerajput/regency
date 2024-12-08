@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import arrow from '../../../public/assets/svg/Arrow.svg';
-
+import { IoIosArrowForward } from "react-icons/io";
+import will from "../../../public/assets/svg/Will.svg"
+import calculator from "../../../public/assets/svg/calculator.svg"
 const Page: React.FC = () => {
   const [step, setStep] = useState<number>(1); // Step to track the current visible section
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -49,13 +51,13 @@ const Page: React.FC = () => {
       id: "create-will",
       label: "Create Your Will",
       description: "Secure Your Wishes Today",
-      icon: "📜", // Replace with an actual image if needed
+      icon:will, 
     },
     {
       id: "net-asset-calculator",
       label: "Use Net Asset Calculator",
       description: "Estimate Your Net Worth in Minutes",
-      icon: "📊", // Replace with an actual image if needed
+      icon: calculator, 
     },
   ];
   const handleKeyPress = (event: React.KeyboardEvent) => {
@@ -65,7 +67,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <div className="flex py-6 justify-center items-center min-h-screen bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
+    <div className="flex py-6 justify-center items-center xl:pb-6  bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
       {step === 1 && (
         <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
           <div className="max-w-[580px] flex flex-col gap-6">
@@ -92,10 +94,10 @@ const Page: React.FC = () => {
         <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
           <div className="max-w-[580px] flex flex-col gap-6" onKeyDown={handleKeyPress} tabIndex={0}>
             <div className="flex justify-between">
-              <h1
-                className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
-                onClick={() => setStep(1)} // Go back to step 1
-              >
+            <h1
+          className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+          onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
+        >
                 <Image src={arrow} alt="" /> Back
               </h1>
               <h3 className="text-[20px] font-inter font-medium">Question {step - 1} of 4</h3>
@@ -104,7 +106,7 @@ const Page: React.FC = () => {
             <p className="text-[30px] font-bold font-inter text-[#191A15]">
               What is your current relationship status?
             </p>
-            <div className="p-4 flex flex-col gap-4">
+            <div className="p-4 flex  flex-col gap-4">
               {options.map((option) => (
                 <label
                   key={option.id}
@@ -136,10 +138,10 @@ const Page: React.FC = () => {
          <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
          <div className="max-w-[580px] min-w-[570px] flex flex-col gap-6" onKeyDown={handleKeyPress} tabIndex={0}>
            <div className="flex justify-between">
-             <h1
-               className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
-               onClick={() => setStep(1)} // Go back to step 1
-             >
+           <h1
+          className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+          onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
+        >
                <Image src={arrow} alt="" /> Back
              </h1>
              <h3 className="text-[20px] font-inter font-medium">Question {step - 1} of 4</h3>
@@ -179,10 +181,10 @@ const Page: React.FC = () => {
          <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
          <div className="max-w-[580px] min-w-[570px] flex flex-col gap-6" onKeyDown={handleKeyPress} tabIndex={0}>
            <div className="flex justify-between">
-             <h1
-               className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
-               onClick={() => setStep(1)} // Go back to step 1
-             >
+           <h1
+          className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+          onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
+        >
                <Image src={arrow} alt="" /> Back
              </h1>
              <h3 className="text-[20px] font-inter font-medium">Question {step - 1} of 4</h3>
@@ -218,10 +220,11 @@ const Page: React.FC = () => {
          <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
          <div className="max-w-[580px] min-w-[570px] flex flex-col gap-6" onKeyDown={handleKeyPress} tabIndex={0}>
            <div className="flex justify-between">
-             <h1
-               className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
-               onClick={() => setStep(1)} // Go back to step 1
-             >
+           <h1
+          className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+          onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
+        >
+                
                <Image src={arrow} alt="" /> Back
              </h1>
              <h3 className="text-[20px] font-inter font-medium">Question {step - 1} of 4</h3>
@@ -259,35 +262,36 @@ const Page: React.FC = () => {
       )}
 
 {step === 6 && (
-         <div className="flex justify-center items-center rounded-xl shadow-xl p-8 bg-white">
+         <div className="flex justify-center items-center rounded-xl shadow-xl py-8 px-8 bg-white">
       <div className="max-w-[580px] min-w-[570px]">
       <div className="flex justify-between">
-             <h1
-               className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
-               onClick={() => setStep(1)} // Go back to step 1
-             >
+      <h1
+          className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+          onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
+        >
                <Image src={arrow} alt="" /> Back
              </h1>
              </div>
-
-       
-        <p className="text-[30px] font-bold font-inter text-[#191A15]">
+        <p className="text-[30px] py-6 font-bold font-inter text-[#191A15]">
         Your Tailored Plan    </p>
-        <div className="flex flex-col gap-4">
-          {options.map((option) => (
+        <div className="flex flex-col pb-2 gap-4">
+          {tailored.map((option) => (
             <div
               key={option.id}
               onClick={() => console.log(`Navigating to: ${option.id}`)}
-              className="flex items-center justify-between gap-4 p-4 border border-gray-300 rounded-lg shadow-sm cursor-pointer hover:shadow-md hover:border-gray-400 transition-all"
+              className="flex items-center  justify-between gap-4 py-5 px-4 border border-gray-300 rounded-lg shadow-sm cursor-pointer hover:shadow-md hover:border-gray-400 transition-all"
             >
-              <div className="flex items-center gap-3">
-                <div className="text-green-600 text-3xl">{option.icon}</div>
-                <div>
-                  <h2 className="text-[18px] font-medium text-gray-900">{option.title}</h2>
-                  <p className="text-[14px] text-gray-600">{option.description}</p>
+              <div className="flex  items-center gap-3">
+              {typeof option.icon === "string" ? (
+                  <span className="text-green-600 text-3xl">{option.icon}</span>
+                ) : (
+                  <Image src={option.icon} alt={option.label} width={28} height={28} />
+                )}                <div>
+                  <h2 className="text-[25px] font-inter font-semibold text-gray-900">{option.label}</h2>
+                  <p className="text-[16px] font-inter text-[#7C7C7C]">{option.description}</p>
                 </div>
               </div>
-              <span className="text-gray-400 text-xl">→</span>
+              <span className="text-gray-400 text-xl"><IoIosArrowForward /></span>
             </div>
           ))}
         </div>
