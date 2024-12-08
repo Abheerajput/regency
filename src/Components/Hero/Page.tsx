@@ -8,6 +8,7 @@ import vector1 from "../../../public/assets/svg/ProtectYour.svg";
 import vector2 from "../../../public/assets/svg/Safety.svg";
 import vector3 from "../../../public/assets/svg/tick.svg";
 import vector4 from "../../../public/assets/svg/Legally.svg";
+import Link from "next/link";
 
 const Hero: React.FC = () => {
   return (
@@ -27,8 +28,12 @@ const Hero: React.FC = () => {
           securely.
         </p>
         <div className="flex xl:pt-12 gap-6 items-center">
+
           <button className="bg-[#54BD95] xl:text-[18px] font-medium px-5 py-3 font-inter text-white rounded-3xl">
-            Start My Will
+<Link href="/question">
+Start My Will</Link>
+          
+
           </button>
           <button className="flex gap-4 text-[#191A15] xl:text-[18px] font-medium font-inter items-center">
             <Image src={img2} alt="Music Icon" />
