@@ -42,9 +42,11 @@ const Navbar: React.FC = () => {
           <li className="text-[#898989] font-inter font-semibold hover:text-black">
             Home
           </li>
+          <Link href="/will">
           <li className="text-[#898989] font-inter font-semibold hover:text-black">
-            Will
+          Will
           </li>
+          </Link>
           <li className="text-[#898989] font-inter font-semibold hover:text-black">
             <Link href="/lpa">
             
@@ -57,9 +59,12 @@ const Navbar: React.FC = () => {
           <li className="text-[#898989] font-inter font-semibold hover:text-black">
             Calculators
           </li>
+          <Link href="/legal">
+        
           <li className="text-[#898989] font-inter font-semibold hover:text-black">
             Legal Services
           </li>
+          </Link>
           <Link href="/signup">
           <button className="px-4 sm:px-3 md:px-3 md:py-1 sm:py-1 rounded-3xl py-3 bg-[#54BD95] font-inter text-white font-semibold">
             Get Started

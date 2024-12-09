@@ -162,7 +162,7 @@ const Page: React.FC = () => {
              {thirdOption.map((option) => (
                <label
                  key={option.id}
-                 onClick={() => setSelectedOption(option.id)} // Select option on click
+                 onClick={() => setSelectedOption(option.id)} 
                  className={`flex items-center px-4 xs:gap-1 gap-3 xs:py-3 py-6 rounded-lg border ${
                    selectedOption === option.id
                      ? '  border-green-300'
