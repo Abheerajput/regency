@@ -123,6 +123,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const feedbackData = [
   {
@@ -172,29 +173,47 @@ const Page = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="w-full max-w-screen-lg mx-auto">
+    <div className='xs:px-[3%]  pt-6 sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[8%]  '>
+       <div className="w-full  py-10 mx-auto">
       <Slider {...settings}>
         {feedbackData.map((item, index) => (
           <div key={index} className="p-4">
             <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">
+              <div className="flex  gap-4 items-center">
               <img
                 src={item.image}
                 alt={item.name}
-                className="max-w-[30px] max-h-[30px] rounded-full mb-4 object-cover"
+                className="w-12 h-12 object-cover rounded-full border-2 shadow-lg"
               />
-              <h3 className="text-lg font-semibold">{item.name}</h3>
+              <span className="flex flex-col">
+              <h3 className="text-lg text-start font-semibold">{item.name}</h3>
               <p className="text-sm text-gray-500">{item.title}</p>
+              </span>
+            
+              </div>
+             
               <p className="mt-4 text-gray-700">{item.feedback}</p>
             </div>
           </div>
         ))}
       </Slider>
     </div>
+    </div>
+   
   );
 };
 

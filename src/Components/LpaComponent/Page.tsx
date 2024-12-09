@@ -26,7 +26,7 @@ const Will :React.FC = () => {
                 <p className='flex  gap-2 items-center text-[18px] font-inter font-medium text-[#191A15]'><CiCircleCheck  className='w-[20px] h-[20px]'/>Starting at just £90.</p>
                 </div>
                 <div className='mt-6'>
-                    <Link href="/willq&a">
+                    <Link href="/lpaque">
                     <button className='px-6 py-3 rounded-3xl bg-[#54BD95]  text-white font-inter '>Let's get started</button>
 
                     </Link>

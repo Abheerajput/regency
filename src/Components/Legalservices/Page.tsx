@@ -18,6 +18,7 @@ import doc from "../../../public/assets/svg/doc.svg"
 import Image from 'next/image';
 import Plans from '../Plans/Page';
 import  Feedback from "../Feedback/Page"
+import FAQ from "../FAQ/Page"
 const Page:React.FC = () => {
     const decorationImages = [
         { src: vector1, alt: "Protect Your Icon", styles: "xs:max-w-[50%] sm:left-[-10%] sm:max-w-[35%] absolute top-[33%] left-[-22%]" },
@@ -175,7 +176,7 @@ Tailored solutions to address your legal needs, <br className='xl:block lg:block
     </div>
     </div>
 <Feedback/>
-
+<FAQ/>
     <Plans/>
     </>
    

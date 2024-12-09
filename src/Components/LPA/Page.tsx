@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import arrow from '../../../public/assets/svg/Arrow.svg';
 import { GoDotFill } from "react-icons/go";
+import Link from 'next/link';
 
 const Page: React.FC = () => {
   const [step, setStep] = useState<number>(1); // Step to track the current visible section
@@ -203,13 +204,16 @@ const Page: React.FC = () => {
             </ul>
            </div>
            <div className="w-full flex justify-end">
-              <button
+            <Link href='/donor'>
+            <button
                 type="button"
                 onClick={handleSubmit} // Use handleSubmit for form validation
                 className="bg-[#54BD95] xs:mt-4 xs:text-[13px] font-inter text-[18px] xs:py-2 xs:px-4 text-white font-medium py-4 px-6 rounded-full"
               >
-                Continue
+                Add donor
               </button>
+            </Link>
+            
             </div>
          </div>
        </div>

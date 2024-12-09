@@ -122,8 +122,8 @@ const handleAttorney = () => {
   return (
     <div className="bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
      <div className=" p-8 flex items-center justify-center ">
-      <div className=" w-full  justify-around flex gap-4 flex-row ">
-     <div className="w-[40%] bg-white h-full p-6 rounded-l-lg">
+      <div className=" w-full  justify-around flex gap-4 xs:flex-col flex-row ">
+     <div className="w-[40%] xs:min-w-full bg-white h-full p-6 rounded-l-lg">
       <div className="flex flex-col text-[20px] font-inter font-bold gap-8 relative">
         {steps.map((step, index) => (
           <div key={index} className="relative">
@@ -271,7 +271,7 @@ const handleAttorney = () => {
   </div>
 )}
 {isDetailsSaved && currentStep === 1 && (
-  <div className="mt-8 min-w-[580px]">
+  <div className="mt-8 xs:min-w-full sm:min-w-full min-w-[580px]">
     {/* Back Button */}
     <button
       onClick={() => setIsDetailsSaved(false)} // Set `isDetailsSaved` to false to show the form again
@@ -291,7 +291,7 @@ const handleAttorney = () => {
       {thirdOption.map((option) => (
         <label
           key={option.id}
-          className={`flex items-center px-4 xs:gap-1 gap-3 xs:py-3 py-6 rounded-lg border ${
+          className={`flex xs:w-1/2 items-center px-4 xs:gap-1 gap-3 xs:py-3 py-6 rounded-lg border ${
             selectedOption === option.id
               ? 'border-green-300  bg-[#E2F2EB]' // Only change the border color on selection
               : 'border-gray-300'
