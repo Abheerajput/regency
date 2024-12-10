@@ -2,10 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 import img from "../../../public/assets/svg/Quotes.svg"
 import img2 from "../../../public/Images/Firstimg.svg"
-import img3 from "../../../public/images/Second.svg"
-import img4 from "../../../public/images/Third.svg"
-import img5 from "../../../public/images/Fourth.svg"
-import img6 from "../../../public/images/Fifth.svg"
+import img3 from "../../../public/Images/Second.svg"
+import img4 from "../../../public/Images/Third.svg"
+import img5 from "../../../public/Images/Fourth.svg"
+import img6 from "../../../public/Images/Fifth.svg"
 import contact from "../../../public/assets/svg/Contact.svg"
 const Page:React.FC = () => {
   return (
