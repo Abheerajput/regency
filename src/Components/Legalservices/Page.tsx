@@ -1,10 +1,10 @@
 import React from 'react'
 import Hero from "../CommonFile/Page";
 import { MdArrowOutward } from "react-icons/md";
-import img1 from "../../../public/assets/Svg/lessonimg1.svg"
-import img2 from "../../../public/assets/Svg/robot.svg"
-import img from "../../../public/assets/Svg/Highlish.svg"
-import img3 from "../../../public/assets/Svg/track.svg"
+import img1 from "../../../public/assets/svg/lessonimg1.svg"
+import img2 from "../../../public/assets/svg/robot.svg"
+import img from "../../../public/assets/svg/Highlish.svg"
+import img3 from "../../../public/assets/svg/track.svg"
 import mainImage from "../../../public/assets/svg/legarimage.svg";
 import vector1 from "../../../public/assets/svg/15minutes.svg";
 import vector2 from "../../../public/assets/svg/Safety.svg";
