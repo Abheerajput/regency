@@ -27,7 +27,7 @@ const Page = () => {
     },
   ];
 
-  const handleToggle = (index) => {
+  const handleToggle = (index:any) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
 

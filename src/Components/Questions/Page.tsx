@@ -45,7 +45,8 @@ const Page: React.FC = () => {
     { id:"£325k to £650k", label: '£325k to £650k' },
     { id:"More than £650k", label: 'More than £650k' },
   ]
-
+ 
+  
   const tailored:Option[] =[
     {
       id: "create-will",
@@ -287,7 +288,7 @@ const Page: React.FC = () => {
               {typeof option.icon === "string" ? (
                   <span className="text-green-600 text-3xl">{option.icon}</span>
                 ) : (
-                  <Image src={option.icon} alt={option.label} width={28} height={28} />
+                  <Image   src={option.icon || "/default-icon.png"} alt={option.label || "Default label"}  width={28} height={28} />
                 )}                <div>
                   <h2 className="text-[25px] xs:text-[18px] font-inter font-semibold text-gray-900">{option.label}</h2>
                   <p className="text-[16px] xs:text-[14px] font-inter text-[#7C7C7C]">{option.description}</p>

@@ -567,8 +567,8 @@ const handleAttorney = () => {
        <textarea
   className="w-full h-[150px] xs:h-[120px] p-4 mt-4 border border-[#ccc] rounded-lg resize-none"
   placeholder="Brief explanation of the role of the certificate provider"
-  rows="3" // You can adjust the number of rows
-  maxLength="500" // Optional: You can limit the number of characters if needed
+  rows={3} // Use curly braces to pass numbers
+  maxLength={500} // Optional: You can limit the number of characters if needed
 ></textarea>
       <div className="flex w-full justify-end pt-4">
       <button

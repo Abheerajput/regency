@@ -7,7 +7,9 @@ import Link from 'next/link';
 const Page: React.FC = () => {
   const [step, setStep] = useState<number>(1); // Step to track the current visible section
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
-
+  type FormDataType = {
+    [key: string]: string; // Allow dynamic string keys
+  };
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -109,13 +111,13 @@ const Page: React.FC = () => {
                   <div className="text-[16px] xs:py-2 py-4 font-inter font-medium">{option.label}</div>
                   <label
                     className={`flex items-center rounded-lg gap-3 border ${
-                      formData[option.name] ? 'border-green-300' : 'border-gray-300'
+                      formData[option.name as keyof typeof formData] ? 'border-green-300' : 'border-gray-300'
                     } cursor-pointer hover:border-green-400`}
                   >
                     <input
                       name={option.name}
                       type={option.type}
-                      value={formData[option.name]} 
+                      value={ formData[option.name as keyof typeof formData]} 
                       onChange={handleChange}
                       className="w-full py-4 xs:py-3 xs:px-3 px-4 rounded-lg"
                       placeholder={option.label}
