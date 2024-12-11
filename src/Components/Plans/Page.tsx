@@ -126,6 +126,8 @@
 import React from 'react'
 import Image from 'next/image'
 import tick from "../../../public/assets/svg/Correct.svg"
+import "../../app/globals.css"
+
 const Plans:React.FC = () => {
   return (
     <div className='xs:px-[3%]  pt-6 sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[8%]  bg-gradient-to-r from-[#ffffff] to-[#E9F6F1]'>

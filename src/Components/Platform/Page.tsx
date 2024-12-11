@@ -5,6 +5,8 @@ import platform from "../../../public/assets/svg/Platform.svg"
 import jhon from "../../../public/assets/svg/Jhon.svg"
 import review from "../../../public/assets/svg/Review.svg"
 import lock from "../../../public/assets/svg/lock.svg"
+import "../../app/globals.css"
+
 const Platform:React.FC = () => {
   return (
     <div className='xs:px-[3%]  sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[8%] bg-gradient-to-r from-[#ffffff] to-[#E9F6F1]'>

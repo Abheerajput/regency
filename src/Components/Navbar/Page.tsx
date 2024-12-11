@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import logo from '../../../public/assets/svg/Navbarlogo.svg';
 import Link from 'next/link';
+import "../../app/globals.css"
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
