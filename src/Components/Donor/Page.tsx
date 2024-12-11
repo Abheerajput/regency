@@ -6,7 +6,7 @@ import plus from "../../../public/assets/svg/Plus.svg"
 import { useRouter } from "next/router";
 import arrow2 from "../../../public/assets/svg/strainghtarrow.svg"
 const Page:React.FC = () => {
-    const router = useRouter();
+  const router = useRouter();
     const [currentStep, setCurrentStep] = useState(1);
     const [value, setValue] = React.useState(0);
     const [progress, setProgress] = useState(0); 
@@ -17,7 +17,6 @@ const Page:React.FC = () => {
       const [showStep2, setShowStep2] = useState(false); 
       const [showStep4, setShowStep4] = useState(false); 
       const [showStep5, setShowStep5] = useState(false); 
-      const [showStep6, setShowStep6] = useState(false);
 const [lpa,setLpa] = useState(false);
 
     type Option = {
@@ -56,6 +55,13 @@ const [lpa,setLpa] = useState(false);
   }, []);
   const handleStepChange = (step: number) => {
     setCurrentStep(step)
+  
+    // Hide step 2 when current step is 3 or 4
+    if (step===1 || step === 3 || step === 4 || step ===2) {
+      setShowStep2(false);
+    } 
+   
+    
     const progressValue = ((step - 1) / (steps.length - 1)) * 100;
     setProgress(progressValue);
   };
@@ -84,28 +90,35 @@ const [lpa,setLpa] = useState(false);
 //   };
   
 
+
 const handleAttorney = () => {
-    setAttorney(true);
-  
-    if (showStep2) {
-      setShowStep2(false);
-      setShowStep3(true);  // Show Step 3
-    } else if (showStep3) {
-      setShowStep3(false);
-      setShowStep4(true);  // Show Step 4
-    } else if (showStep4) {
-      // If Step 4 is visible, hide it and show Step 5
-      setShowStep4(false);
-    }else if(showStep5){
-        setShowStep5(false);
-        setShowStep2(false)
-        setShowStep3(false)
-    } 
-   
-    else {
-      setCurrentStep(1); 
-    }
-  };
+  setAttorney(true); // This will set `attorney` to true
+
+  if (showStep2) {
+    // If Step 2 is visible, hide it and show Step 3
+    setShowStep2(false);
+    setShowStep3(true);  // Show Step 3
+  } else if (showStep3) {
+    // If Step 3 is visible, hide it and show Step 4
+    setShowStep2(false);
+    setShowStep3(false);
+    setShowStep4(true);  // Show Step 4
+  } else if (showStep4) {
+    // If Step 4 is visible, hide it and show Step 5
+    setShowStep3(false);
+    setShowStep4(false);
+    setShowStep5(true);  
+  }else if(showStep5){
+      setShowStep5(false);
+      setShowStep2(false)
+      setShowStep3(false)
+  } 
+ 
+  else {
+    setCurrentStep(1); 
+  }
+};
+
   
   const  thirdOption: Option[] =[
     { id:"As soon as registered",label: 'As soon as registered (with donors consent): Attorneys act with the donors permission' },
@@ -161,7 +174,7 @@ const handleAttorney = () => {
       </div>
     </div>
 
-        <div className=" min-w-[60%] rounded-xl shadow-md bg-white mr-4 p-6">
+        <div className=" min-w-[60%] rounded-xl mb-6 shadow-md bg-white mr-4 p-6">
         {currentStep === 1 && !isDetailsSaved && ( // Show form only if details are not saved
   <div>
     <h1
@@ -314,7 +327,8 @@ const handleAttorney = () => {
     <button
       onClick={() => {
         if (selectedOption) {
-          handleStepChange(2); // Proceed to next step if an option is selected
+          handleStepChange(2);
+          setAttorney(true) 
         } else {
           alert('Please select an option before proceeding.');
         }
@@ -370,7 +384,12 @@ const handleAttorney = () => {
       <div className="w-full flex justify-end">
       <button
         className="py-2 px-4 bg-[#54BD95] text-white mt-4 rounded-full"
-                  onClick={handleAttorney} // Save details
+        onClick={() => {
+          setAttorney(true);
+          setShowStep2(true);
+          setShowStep3(false);  
+            
+        }} 
     >
       Continue
     </button>
@@ -461,12 +480,13 @@ const handleAttorney = () => {
      <div className="flex justify-end mt-4 gap-4">
        <button
          type="button"
-          onClick={() => {
-        setAttorney(true);
-        setShowStep2(false);
-        setShowStep3(true);  // Hide Step 5
-           // Show Step 4
-      }}  // Save details
+         onClick={() => {
+          setAttorney(true);
+          setShowStep2(false);
+          setShowStep5(false)
+          setShowStep3(true);  // Hide Step 5
+             // Show Step 4
+        }}  // Save details
          className="bg-[#54BD95] xs:text-[13px] font-inter text-[18px] xs:py-2 xs:px-4 text-white font-medium py-3 px-6 rounded-full"
        >
        Save and Continue
@@ -487,9 +507,8 @@ const handleAttorney = () => {
       {/* Back Button */}
       <button
         onClick={() => {
-            setAttorney(false);
- setShowStep2(true);
-            setShowStep3(false);  // Hide Step 3
+          setShowStep2(true);
+          setShowStep3(false);    // Hide Step 3
               // Show Step 2
           }}   // Set `isDetailsSaved` to false to show the form again
         className="flex gap-2 text-[20px] text-[#191A15] font-medium mb-4"
@@ -532,8 +551,12 @@ const handleAttorney = () => {
       <div className="flex w-full justify-end">
       <button
          className="bg-[#54BD95] xs:text-[13px] font-inter text-[18px] xs:py-2 xs:px-4 text-white font-medium py-3 px-6 rounded-full"
-         onClick={handleAttorney}
-         
+         onClick={() => {
+          setAttorney(true);
+          setShowStep4(true);
+          setShowStep3(false);  // Hide Step 3
+            // Show Step 2
+        }} 
       >
        Continue
       </button>
@@ -547,10 +570,9 @@ const handleAttorney = () => {
        {/* Back Button */}
        <button
         onClick={() => {
-            setAttorney(false);
-            setShowStep4(false);  // Hide Step 4
-            setShowStep3(true);   // Show Step 3
-          }}  // Set `isDetailsSaved` to false to show the form again
+          setShowStep4(false);  // Hide Step 4
+          setShowStep3(true);   // Show Step 3
+        }}   // Set `isDetailsSaved` to false to show the form again
          className="flex gap-2 text-[20px] text-[#191A15] font-medium mb-4"
        >
          <Image src={arrow} alt="" />
@@ -572,10 +594,10 @@ const handleAttorney = () => {
       <button
          type="button"
          onClick={() => {
-            setAttorney(true);  // Keep attorney true if needed for step 5
-            setShowStep4(false);  // Hide Step 4
-            setShowStep5(true);   // Show Step 5
-          }}
+          setAttorney(true);  // Keep attorney true if needed for step 5
+          setShowStep4(false);  // Hide Step 4
+          setShowStep5(true);   // Show Step 5
+        }}
          className="bg-[#54BD95] xs:text-[13px] font-inter text-[18px] xs:py-2 xs:px-4 text-white font-medium py-3 px-6 rounded-full"
        >
       Add a certificate provider
@@ -591,11 +613,10 @@ const handleAttorney = () => {
   <div className="mt-8 xs:min-w-full min-w-[580px]">
     {/* Back Button */}
     <button
-      onClick={() => {
-        setAttorney(false);
-        setShowStep5(false);  // Hide Step 5
-        setShowStep4(true);   // Show Step 4
-      }} // Set `isDetailsSaved` to false to show the form again
+     onClick={() => {
+      setShowStep5(false);  // Hide Step 5
+      setShowStep4(true);   // Show Step 4
+    }} //// Set `isDetailsSaved` to false to show the form again
       className="flex gap-2 text-[20px] text-[#191A15] font-medium mb-4"
     >
       <Image src={arrow} alt="" />
@@ -623,9 +644,8 @@ const handleAttorney = () => {
         onClick={() => {
           setAttorney(true); 
           setShowStep5(false);  // Hide Step 5
-          setLpa(true);   // Show Step 6
           handleStepChange(3);  // Call handleStepChange to move to Step 6
-        }}  // Save details
+        }}  /// Save details
         className="bg-[#54BD95] xs:text-[13px] font-inter text-[18px] xs:py-2 xs:px-4 text-white font-medium py-3 px-6 rounded-full"
       >
         Add a certificate provider
@@ -637,11 +657,13 @@ const handleAttorney = () => {
  {currentStep === 3 && !lpa && (
     <div className="mt-8 xs:min-w-full min-w-[580px]">
     <button
-      onClick={() => {
-        setAttorney(false);
-        setShowStep5(true);  
-        setShowStep4(false);  
-      }} 
+    onClick={() => {
+      handleStepChange(2)
+      setShowStep5(true)
+      setShowStep2(false)
+      setShowStep4(false);
+      setLpa(false)
+    }} 
       className="flex gap-2 text-[20px] text-[#191A15] font-medium mb-4"
     >
       <Image src={arrow} alt="" />
@@ -664,10 +686,12 @@ attorneys.</p>
    <button
       type="button"
       onClick={() => {
-        setAttorney(true);  // Keep attorney true if needed for step 5
-        setShowStep5(false);  // Hide Step 5
-        setLpa(true);   // Show Step 6
-        handleStepChange(3);  // Call handleStepChange to move to Step 6
+       
+        handleStepChange(4); 
+        setAttorney(false);
+        setLpa(false); 
+      
+        
       }}  
       className="bg-[#54BD95] xs:text-[13px] font-inter text-[18px] xs:py-2 xs:px-4 text-white font-medium py-3 px-6 rounded-full"
     >
@@ -677,13 +701,17 @@ attorneys.</p>
   </div>
         
         )}
-{lpa && currentStep === 3 &&( 
+{currentStep === 4 &&( 
 
  <div>
  <button
    className="flex gap-2   text-[#191A15] hover:underline mb-4 text-[20px] font-inter font-medium cursor-pointer"
-   onClick={() =>{setLpa(false)
-
+   onClick={() =>{
+    setAttorney(true);
+    setShowStep2(false)
+    setShowStep3(false)
+    setShowStep4(false)
+    setShowStep5(false)
    handleStepChange(3)}}  >
    <Image src={arrow} alt="" /> Back
  </button>
