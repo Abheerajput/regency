@@ -9,7 +9,7 @@ import Platform from '../Platform/Page';
 import Plans from '../Plans/Page';
 import Review from "../Review/Page"
 import Footer from "../Footer/Page"
-
+import "../../app/globals.css"
 const Main: React.FC = () => {
   return (
     <>
