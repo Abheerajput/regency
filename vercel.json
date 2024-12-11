@@ -10,10 +10,10 @@
       }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/index.html"
-      }
-    ]
+        {
+          "src": "/old-page",
+          "dest": "/new-page"
+        }
+      ]
   }
   

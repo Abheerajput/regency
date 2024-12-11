@@ -266,39 +266,12 @@ export default Page;
 
 //     <div>
 //     <div className='flex justify-center items-center rounded-xl shadow-xl p-8 bg-white'>
-//         <div className='max-w-[580px] flex flex-col gap-6  '>
-//             <div className='flex justify-between'>
+//             < className='flex justify-between'>
 //             <h1 className='flex gap-2 text-[20px] font-inter font-medium'>
 //     <Image src={arrow} alt="" /> Back</h1>
 //     <h3 className='text-[20px] font-inter font-medium'>Question 1 of 4</h3>
-//             </div>
+//            
 
-// <p className='text-[30px] font-bold  font-inter text-[#191A15]'>What is your current relationship 
-// status?</p>
-// <div className=" p-4 flex flex-col gap-4">
-//       {options.map((option) => (
-//         <label
-//           key={option.id}
-//           className={`flex items-center  px-4 gap-3 py-3 rounded-lg border ${
-//             selectedOption === option.id
-//               ? "bg-green-50 border-green-300"
-//               : "border-gray-300"
-//           } cursor-pointer hover:border-green-400`}
-//         >
-//           <input
-//             type="radio"
-//             name="status"
-//             value={option.id}
-//             checked={selectedOption === option.id}
-//             onChange={() => setSelectedOption(option.id)}
-//             className="w-5 h-5 text-green-600  focus:ring-green-500"
-//           />
-//           <span className="text-[16px] font-inter font-medium">{option.label}</span>
-//         </label>
-//       ))}
-//     </div>
-
-//         </div>
 //     </div>
 
 //     </div>
