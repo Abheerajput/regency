@@ -49,16 +49,19 @@ const Hero: React.FC<HeroProps> = ({
   {buttonText}
 </Link>
 
-            <button className="flex gap-4 text-[#191A15] xl:text-[18px] font-medium font-inter items-center">
-              <Image src={secondaryIcon} alt="Secondary Icon" />
-              {secondaryButtonText}
-            </button>
+{secondaryIcon && secondaryIcon !== '' && (
+  <button className="flex gap-4 text-[#191A15] xl:text-[18px] font-medium font-inter items-center">
+    <Image src={secondaryIcon} alt="Secondary Icon" />
+    {secondaryButtonText}
+  </button>
+)}
+
           </div>
         </div>
 
         <div className="w-[50%] flex xs:justify-center xs:w-full justify-end">
-          <div className="relative xs:w-[80%]">
-            <Image src={mainImage} alt="Hero Image" className="xs:w-full w-[85%] rounded-md" />
+          <div className="relative  xs:w-[80%]">
+            <Image src={mainImage} alt="Hero Image" className="xs:w-full xl:w-[95%]  w-[85%] rounded-md" />
             {decorationImages.map((img, index) => (
               <Image
                 key={index}

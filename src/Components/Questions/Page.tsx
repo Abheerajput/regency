@@ -74,7 +74,7 @@ const Page: React.FC = () => {
           <div className="flex justify-center xs:min-w-full w-full items-center ">
         <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-2 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
         
-            <h1 className="flex gap-2 text-[20px] font-inter font-medium">
+            <h1 className="flex gap-2 text-[20px] text-[#191A15] font-inter font-medium">
               <Image src={arrow} alt="" /> Back
             </h1>
             <p className="text-[30px] xs:text-[23px] font-bold xs:py-4 font-inter text-[#191A15]">
@@ -98,7 +98,7 @@ const Page: React.FC = () => {
         <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-2 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
         <div className="flex justify-between">
             <h1
-          className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+          className="flex gap-2 text-[20px] text-[#191A15] font-inter font-medium cursor-pointer"
           onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
         >
                 <Image src={arrow} alt="" /> Back
@@ -142,7 +142,7 @@ const Page: React.FC = () => {
         <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-2 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
         <div className="flex justify-between">
             <h1
-          className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+          className="flex gap-2 text-[20px] text-[#191A15] font-inter font-medium cursor-pointer"
           onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
         >
                <Image src={arrow} alt="" /> Back
@@ -185,7 +185,7 @@ const Page: React.FC = () => {
         <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-2 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
         <div className="flex justify-between">
             <h1
-          className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+          className="flex gap-2 text-[20px] text-[#191A15] font-inter font-medium cursor-pointer"
           onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
         >
                <Image src={arrow} alt="" /> Back
@@ -224,7 +224,7 @@ const Page: React.FC = () => {
         <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-2 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
         <div className="flex justify-between">
              <h1
-          className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+          className="flex gap-2 text-[20px] text-[#191A15] font-inter font-medium cursor-pointer"
           onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
         >
                 
@@ -269,7 +269,7 @@ const Page: React.FC = () => {
         <div className="max-w-[580px] min-w-[579px] xs:min-w-full flex flex-col xs:gap-2 gap-6 rounded-xl  shadow-xl  xs:p-4 p-8 bg-white" onKeyDown={handleKeyPress} tabIndex={0}>
         <div className="flex justify-between">
               <h1
-          className="flex gap-2 text-[20px] font-inter font-medium cursor-pointer"
+          className="flex gap-2 text-[20px] text-[#191A15] font-inter font-medium cursor-pointer"
           onClick={() => setStep((prevStep) => Math.max(prevStep - 1, 1))} // Decrement step, but not below 1
         >
                <Image src={arrow} alt="" /> Back

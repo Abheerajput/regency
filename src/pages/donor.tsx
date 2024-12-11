@@ -9,7 +9,7 @@ export default function DonorComponent() {
     return(
         <>
         <Navbar/>
-        <Donor/>
+        <Donor />
         <Footer/>
             </>
     )

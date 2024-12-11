@@ -4,6 +4,7 @@ import Image from "next/image";
 import {Progress} from "@nextui-org/react";
 import plus from "../../../public/assets/svg/Plus.svg"
 import { useRouter } from "next/router";
+import arrow2 from "../../../public/assets/svg/strainghtarrow.svg"
 const Page:React.FC = () => {
     const router = useRouter();
     const [currentStep, setCurrentStep] = useState(1);
@@ -116,10 +117,10 @@ const handleAttorney = () => {
 
   ]
   return (
-    <div  className="bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
-     <div className=" p-8 flex items-center justify-center ">
+    <div  className="bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB] xs:px-[3%] sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[8%] ">
+     <div className=" pt-8 flex items-center justify-center ">
       <div className=" w-full  justify-around flex gap-4 xs:flex-col flex-row ">
-     <div className="w-[40%] xs:min-w-full bg-white h-full p-6 rounded-l-lg">
+     <div className="w-[40%] xs:min-w-full shadow-md bg-white h-full p-6 rounded-xl">
       <div className="flex flex-col text-[20px] font-inter font-bold gap-8 relative">
         {steps.map((step, index) => (
           <div key={index} className="relative">
@@ -160,50 +161,50 @@ const handleAttorney = () => {
       </div>
     </div>
 
-        <div className=" min-w-[60%] rounded-lg shadow-lg bg-white mr-4 p-6">
+        <div className=" min-w-[60%] rounded-xl shadow-md bg-white mr-4 p-6">
         {currentStep === 1 && !isDetailsSaved && ( // Show form only if details are not saved
   <div>
     <h1
-      className="flex gap-2 text-sm text-green-700 hover:underline mb-4 text-[20px] font-inter font-medium cursor-pointer"
+      className="flex gap-2  text-[#191A15] hover:underline mb-4 text-[20px] font-inter font-medium cursor-pointer"
        // Decrement step, but not below 1
     >
       <Image src={arrow} alt="" /> Back
     </h1>
-    <h2 className="text-xl font-bold mb-4">Enter Donor's Information</h2>
+    <h2 className="text-[30px] font-bold font-inter mb-4">Enter Donor's Information</h2>
     <form className="py-4">
       <div className="flex w-full gap-4 justify-between ">
         <span className="w-1/2">
-          <label htmlFor="" className="xl:text-[25px] font-medium text-[18px] text-[#191A15] font-inter">First Name</label>
+          <label htmlFor="" className="xl:text-[25px]  font-semibold text-[18px] text-[#191A15] font-inter">First Name</label>
           <input
             type="text"
-            placeholder="First Name"
-            className="input-field py-4"
+            placeholder=""
+            className="input-field py-3 my-[16px] rounded-[8px] border-[#C5C7C6] "
           />
         </span>
         <span className="w-1/2">
-          <label htmlFor="" className="xl:text-[25px] text-[18px] font-medium text-[#191A15] font-inter">Last Name</label>
+          <label htmlFor="" className="xl:text-[25px] text-[18px] font-semibold text-[#191A15] font-inter">Last Name</label>
           <input
             type="text"
-            placeholder="Last Name"
-            className="input-field py-4"
+            placeholder=""
+            className="input-field my-[16px] rounded-[8px] border-[#C5C7C6] py-3"
           />
         </span>
       </div>
-      <div className="flex w-full py-4 gap-4 justify-between ">
+      <div className="flex w-full  gap-4 justify-between ">
         <span className="w-1/2">
-          <label htmlFor="" className="xl:text-[25px] text-[18px] font-medium text-[#191A15] font-inter">Date of Birth</label>
+          <label htmlFor="" className="xl:text-[25px] text-[18px] font-semibold text-[#191A15] font-inter">Date of Birth</label>
           <input
             type="date"
-            placeholder="Date of Birth"
-            className="input-field py-4"
+            placeholder=""
+            className="input-field my-[16px] rounded-[8px] border-[#C5C7C6] py-3"
           />
         </span>
         <span className="w-1/2">
-          <label htmlFor="" className="xl:text-[25px] font-medium text-[18px] text-[#191A15] font-inter">Email Address</label>
+          <label htmlFor="" className="xl:text-[25px] font-semibold text-[18px] text-[#191A15] font-inter">Email Address</label>
           <input
             type="email"
-            placeholder="Email Address"
-            className="input-field py-4"
+            placeholder=""
+            className="input-field my-[16px] rounded-[8px] border-[#C5C7C6] py-3"
           />
         </span>
       </div>
@@ -212,39 +213,40 @@ const handleAttorney = () => {
         <input
           type="text"
           placeholder="Find UK address"
-          className="input-field py-4 text-right font-medium placeholder-green-700 text-green-700"
+          className="input-field py-3 my-[16px] rounded-[8px]  text-right font-medium placeholder-green-700 text-green-700"
         />
       </div>
-      <div>
-        <button className="text-[18px] py-4 font-semibold text-[#54BD95]">
+      <div className="my-[16px] flex items-center">
+        <Image src={arrow2} alt=""/>
+        <button className="text-[18px]  lg:text-[22px] xl:text-[25px] py-3 font-semibold text-[#54BD95]">
           Enter address manually
         </button>
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col ">
         <label htmlFor="" className="xl:text-[25px] font-inter text-[20px] font-semibold text-[#191A15]">Address Line 1</label>
         <input
           type="text"
           placeholder="Address Line 1"
-          className="input-field"
+          className="input-field my-[16px] rounded-[8px] border-[#C5C7C6] py-3"
         />
         <label htmlFor="" className="xl:text-[25px] font-inter text-[20px] font-semibold text-[#191A15]">Address Line 2</label>
         <input
           type="text"
           placeholder="Address Line 2"
-          className="input-field"
+          className="input-field my-[16px] rounded-[8px] border-[#C5C7C6] py-3"
         />
         <label htmlFor="" className="xl:text-[25px] font-inter text-[20px] font-semibold text-[#191A15]">Address Line 3</label>
         <input
           type="text"
           placeholder="Address Line 3"
-          className="input-field"
+          className="input-field my-[16px] rounded-[8px] border-[#C5C7C6] py-3"
         />
       </div>
       <div>
         <label className="flex items-center space-x-2">
-          <input type="checkbox" />
-          <span className="py-4 text-[16px] font-inter">
-            The donor is unable to sign or make a mark on the LPA
+          <input type="checkbox" className="w-[20px] h-[20px]"/>
+          <span className="py-4 text-[16px] xl:text-[21px] font-medium text-[#666666] font-inter">
+            The donor is unable to sign or make a mark <br className="xl:block lg:block hidden"/> on the LPA
           </span>
         </label>
       </div>
@@ -271,7 +273,7 @@ const handleAttorney = () => {
     {/* Back Button */}
     <button
       onClick={() => setIsDetailsSaved(false)} // Set `isDetailsSaved` to false to show the form again
-      className="flex gap-2 text-[#54BD95] font-medium mb-4"
+      className="flex gap-2 text-[#191A15] font-medium mb-4"
     >
       <Image src={arrow} alt="" />
       Back
@@ -301,7 +303,7 @@ const handleAttorney = () => {
             onChange={() => setSelectedOption(option.id)} // Update selected option
             className="hidden" // Hide the input, use label styles
           />
-          <span className="text-[16px] font-inter font-bold">
+          <span className="text-[16px] xl:text-[24px]  font-inter font-semibold  text-[#191A15]">
             {option.label}
           </span>
         </label>
@@ -333,7 +335,7 @@ const handleAttorney = () => {
              
               <button
                 onClick={() => handleStepChange(1)}
-                className="flex gap-2 text-[#54BD95] font-medium mb-4"
+                className="flex gap-2 text-[20px] text-[#191A15] font-medium mb-4"
     >
       <Image src={arrow} alt="" />
       Back
@@ -381,7 +383,7 @@ const handleAttorney = () => {
 {attorney && showStep2 &&  (
    <div>
    <button
-     className="flex gap-2 text-sm text-green-700 hover:underline mb-4 text-[20px] font-inter font-medium cursor-pointer"
+     className="flex gap-2  text-[#191A15] hover:underline mb-4 text-[20px] font-inter font-medium cursor-pointer"
      onClick={() => setAttorney(false)}   >
      <Image src={arrow} alt="" /> Back
    </button>
@@ -392,7 +394,7 @@ const handleAttorney = () => {
         <input
           type="text"
           placeholder=""
-          className="input-field py-3"
+          className="input-field py-3 rounded-[8px] border-[#C5C7C6] "
         />
   
     </div>
@@ -402,7 +404,7 @@ const handleAttorney = () => {
          <input
            type="text"
            placeholder=""
-           className="input-field py-3"
+           className="input-field py-3 rounded-[8px] border-[#C5C7C6] "
          />
        </span>
        <span className="w-1/2">
@@ -410,7 +412,7 @@ const handleAttorney = () => {
          <input
            type="text"
            placeholder=""
-           className="input-field py-3"
+           className="input-field rounded-[8px] border-[#C5C7C6] py-3"
          />
        </span>
      </div>
@@ -419,7 +421,7 @@ const handleAttorney = () => {
          <input
            type="date"
            placeholder="Date of Birth"
-           className="input-field py-3"
+           className="input-field rounded-[8px] border-[#C5C7C6] py-3"
          />
     
      </div>
@@ -428,7 +430,7 @@ const handleAttorney = () => {
          <input
            type="email"
            placeholder="Email Address"
-           className="input-field py-3"
+           className="input-field rounded-[8px] border-[#C5C7C6] py-3"
          />
      
      <div>
@@ -449,7 +451,7 @@ const handleAttorney = () => {
        <input
          type="text"
          placeholder=""
-         className="input-field py-3  font-medium "
+         className="input-field py-3 rounded-[8px] border-[#C5C7C6]  font-medium "
        />
      </div>
      <h1 className="py-3 font-inter flex gap-4 text-[20px] font-medium text-[#666666]"><Image src={plus} alt="" className=""/> Add another attorney</h1>
@@ -481,7 +483,7 @@ const handleAttorney = () => {
 )}
 
 {attorney   && showStep3 &&(
-      <div className="mt-8 min-w-[580px]">
+      <div className="mt-8 xs:min-w-full min-w-[580px]">
       {/* Back Button */}
       <button
         onClick={() => {
@@ -490,7 +492,7 @@ const handleAttorney = () => {
             setShowStep3(false);  // Hide Step 3
               // Show Step 2
           }}   // Set `isDetailsSaved` to false to show the form again
-        className="flex gap-2 text-[#54BD95] font-medium mb-4"
+        className="flex gap-2 text-[20px] text-[#191A15] font-medium mb-4"
       >
         <Image src={arrow} alt="" />
         Back
@@ -541,7 +543,7 @@ const handleAttorney = () => {
 )}
 
 {attorney && showStep4 &&(
-       <div className="mt-8 min-w-[580px]">
+       <div className="mt-8 xs:min-w-full min-w-[580px]">
        {/* Back Button */}
        <button
         onClick={() => {
@@ -549,7 +551,7 @@ const handleAttorney = () => {
             setShowStep4(false);  // Hide Step 4
             setShowStep3(true);   // Show Step 3
           }}  // Set `isDetailsSaved` to false to show the form again
-         className="flex gap-2 text-[#54BD95] font-medium mb-4"
+         className="flex gap-2 text-[20px] text-[#191A15] font-medium mb-4"
        >
          <Image src={arrow} alt="" />
          Back
@@ -586,7 +588,7 @@ const handleAttorney = () => {
 )}
 
 {attorney && showStep5 && (
-  <div className="mt-8 min-w-[580px]">
+  <div className="mt-8 xs:min-w-full min-w-[580px]">
     {/* Back Button */}
     <button
       onClick={() => {
@@ -594,7 +596,7 @@ const handleAttorney = () => {
         setShowStep5(false);  // Hide Step 5
         setShowStep4(true);   // Show Step 4
       }} // Set `isDetailsSaved` to false to show the form again
-      className="flex gap-2 text-[#54BD95] font-medium mb-4"
+      className="flex gap-2 text-[20px] text-[#191A15] font-medium mb-4"
     >
       <Image src={arrow} alt="" />
       Back
@@ -609,7 +611,7 @@ const handleAttorney = () => {
     </p>
     <div className="flex flex-col ">
       <label htmlFor="" className="py-4 font-inter font-medium text-[#191A15]">Enter Person Name</label>
-      <input type="text" className="py-4 border rounded-xl"/>
+      <input type="text" className="py-4 border-[#C7C8C7] rounded-[8px] "/>
     </div>
     <h1 className="py-3 font-inter flex gap-4 text-[20px] font-medium text-[#666666]">
       <Image src={plus} alt="" className=""/> Add another attorney
@@ -633,14 +635,14 @@ const handleAttorney = () => {
 )}
 
  {currentStep === 3 && !lpa && (
-    <div className="mt-8 min-w-[580px]">
+    <div className="mt-8 xs:min-w-full min-w-[580px]">
     <button
       onClick={() => {
         setAttorney(false);
         setShowStep5(true);  
         setShowStep4(false);  
       }} 
-      className="flex gap-2 text-[#54BD95] font-medium mb-4"
+      className="flex gap-2 text-[20px] text-[#191A15] font-medium mb-4"
     >
       <Image src={arrow} alt="" />
       Back
@@ -652,7 +654,7 @@ const handleAttorney = () => {
 <p className="text-[20px] text-[#666666] font-inter font-medium">Option for the donor to provide specific instructions for the 
 attorneys.</p>
 <p className="p-3">
-<input type="text" className="py-4 w-full border rounded-xl"/>
+<input type="text" className="py-4 w-full rounded-[8px] border-[#C5C7C6]"/>
 
 </p>
 
@@ -679,7 +681,7 @@ attorneys.</p>
 
  <div>
  <button
-   className="flex gap-2 text-sm text-green-700 hover:underline mb-4 text-[20px] font-inter font-medium cursor-pointer"
+   className="flex gap-2   text-[#191A15] hover:underline mb-4 text-[20px] font-inter font-medium cursor-pointer"
    onClick={() =>{setLpa(false)
 
    handleStepChange(3)}}  >
@@ -692,7 +694,7 @@ attorneys.</p>
       <input
         type="text"
         placeholder="Property and finance"
-        className="input-field py-3"
+        className="input-field rounded-[8px] border-[#C5C7C6] py-3"
       />
 
   </div>
@@ -702,7 +704,7 @@ attorneys.</p>
        <input
          type="text"
          placeholder="Mr. John Bee"
-         className="input-field py-3"
+         className="input-field rounded-[8px] border-[#C5C7C6] py-3"
        />
      </span>
      <span className="w-1/2">
@@ -710,7 +712,7 @@ attorneys.</p>
        <input
          type="date"
          placeholder="1 January 1965"
-         className="input-field py-3"
+         className="input-field rounded-[8px] border-[#C5C7C6] py-3"
        />
      </span>
    </div>
@@ -721,7 +723,7 @@ attorneys.</p>
        <input
          type="email"
          placeholder="h.john@gmail.com"
-         className="input-field py-3"
+         className="input-field rounded-[8px] border-[#C5C7C6] py-3"
        />
 </span>
       <span className="w-1/2">
@@ -729,7 +731,7 @@ attorneys.</p>
        <input
          type="text"
          placeholder="Yes"
-         className="input-field py-3"
+         className="input-field rounded-[8px] border-[#C5C7C6] py-3"
        />
       </span>
        
@@ -739,7 +741,7 @@ attorneys.</p>
      <input
        type="text"
        placeholder="12 Ridings Avenue, London, N21 2EL"
-       className="input-field py-3  font-medium "
+       className="input-field py-3 rounded-[8px] border-[#C5C7C6]  font-medium "
      />
    </div>
    <div className="pt-4">
@@ -747,7 +749,7 @@ attorneys.</p>
      <input
        type="text"
        placeholder="As soon as it's registered"
-       className="input-field py-3  font-medium "
+       className="input-field py-3  rounded-[8px] border-[#C5C7C6] font-medium "
      />
    </div>
 
@@ -757,7 +759,7 @@ attorneys.</p>
        <input
          type="text"
          placeholder="Miss Medi Barand"
-         className="input-field py-3"
+         className="input-field py-3 rounded-[8px] border-[#C5C7C6]"
        />
      </span>
      <span className="w-1/2">
@@ -765,7 +767,7 @@ attorneys.</p>
        <input
          type="date"
          placeholder="1 January 1965"
-         className="input-field py-3"
+         className="input-field py-3 rounded-[8px] border-[#C5C7C6]"
        />
      </span>
    </div>
@@ -775,7 +777,7 @@ attorneys.</p>
      <input
        type="text"
        placeholder="7 Ridings Avenue, London, N21 2EL"
-       className="input-field py-3 font-medium "
+       className="input-field py-3 font-medium rounded-[8px] border-[#C5C7C6] "
      />
    </div>
    <div className="pt-4">
@@ -783,7 +785,7 @@ attorneys.</p>
      <input
        type="text"
        placeholder="No replacement attorneys"
-       className="input-field py-3 font-medium "
+       className="input-field py-3 font-medium  rounded-[8px] border-[#C5C7C6]"
      />
    </div>
    <div className="pt-4">
@@ -791,7 +793,7 @@ attorneys.</p>
      <input
        type="text"
        placeholder="Not added"
-       className="input-field py-3 font-medium "
+       className="input-field py-3 font-medium rounded-[8px] border-[#C5C7C6]"
      />
    </div>
  
