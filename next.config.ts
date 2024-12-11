@@ -1,8 +1,12 @@
-import { NextConfig } from 'next';
 import path from 'path';
 
-const nextConfig: NextConfig = {
-  // Add static file serving from public folder
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  experimental: {
+    appDir: true, // Enables the new `app` directory
+  },
+
   async rewrites() {
     return [
       {
@@ -12,33 +16,10 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Optional: webpack configuration
   webpack: (config) => {
     config.resolve.alias['@assets'] = path.resolve(__dirname, 'public/assets');
     return config;
-  }
+  },
 };
 
 export default nextConfig;
-
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   // Add static file serving from public folder
-//   async rewrites() {
-//     return [
-//       {
-//         source: '/assets/:path*',
-//         destination: '/public/assets/:path*',
-//       },
-//     ];
-//   },
-
- 
-//   webpack: (config) => {
-//     config.resolve.alias['@assets'] = path.resolve(__dirname, 'public/assets');
-//     return config;
-//   }
-// };
-
-// module.exports = nextConfig;
