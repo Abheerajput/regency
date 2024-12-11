@@ -100,28 +100,8 @@
 //           <div className="flex gap-6 shadow-md bg-white py-2 rounded-lg px-4">
 //             <button className="px-4 py-2 text-black bg-white font-inter font-medium border border-transparent rounded-md focus:outline-none">
 //               Bi Monthly
-//             </button>
-//             <button className="px-4 py-2 text-white bg-[#54BE96] font-inter font-medium rounded-md focus:outline-none">
-//               Bi Yearly
-//             </button>
-//           </div>
-//         </div>
-//         <div className="flex flex-wrap justify-between gap-6 mt-12">
-//   {planData.map((plan, index) => (
-//     <PlanCard
-//       key={index}
-//       {...plan}
-//       cardStyle={`${index === 1 ? 'mt-[-13px] bg-[#54BD95] pb-[30px]' : 'bg-white'}`} // Apply negative margin-top to the second card
-//     />
-//   ))}
-// </div>
+// 
 
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Plans;
 
 import React from 'react'
 import Image from 'next/image'
