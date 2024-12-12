@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <div
-        className={`min-w-[70%] ps-4 justify-end gap-6 xl:gap-14 lg:gap-10 xs:min-w-[100%] md:flex lg:flex xl:flex sm:flex items-center ${
+        className={`min-w-[70%] cursor-pointer ps-4 justify-end gap-6 xl:gap-14 lg:gap-10 xs:min-w-[100%] md:flex lg:flex xl:flex sm:flex items-center ${
           menuOpen ? 'block' : 'hidden'
         } md:block lg:block sm:block xl:block`}
       >

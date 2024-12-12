@@ -29,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <div className="xs:px-[3%] py-[2rem]  sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[9%] bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
-      <div className="w-full flex xs:flex-col justify-between  gap-12 pb-8 xs:px-4">
+      <div className="w-full flex xs:flex-col justify-between  gap-12  xs:px-4">
         <div className="w-[50%] xs:w-full">
           <div className="relative">
             <h1 className="lg:text-[64px] xl:text-[64px] md:text-[40px] sm:text-[35px] xs:text-[30px] font-inter font-bold text-[#191A15]">
@@ -60,8 +60,9 @@ const Hero: React.FC<HeroProps> = ({
         </div>
 
         <div className="w-[50%] flex xs:justify-center xs:w-full justify-end">
-          <div className="relative  xs:w-[80%]">
-            <Image src={mainImage} alt="Hero Image" className="xs:w-full xl:w-[100%]  w-[100%] rounded-md" />
+        <div className="relative max-h-[529px] max-w-[424px ]  xs:w-[80%]">
+        <Image src={mainImage} alt="Hero Image" className="xs:w-full xl:w-[100%]  w-[100%] rounded-md object-cover " />
+
             {decorationImages.map((img, index) => (
               <Image
                 key={index}

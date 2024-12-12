@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import correct from "../../../public/assets/svg/Correct.svg"
-import platform from "../../../public/assets/svg/WillImage.svg"
+import will from "../../../public/assets/svg/willseectionimage.png"
 import { CiCircleCheck } from "react-icons/ci";
 import img from "../../../public/assets/svg/15minutes.svg"
 import review from "../../../public/assets/svg/Expert.svg"
@@ -38,8 +38,9 @@ const Will :React.FC = () => {
                 </div>
             </div>
             <div className='w-[50%] items-center xs:w-full  xs:justify-center flex justify-end'>
-            <div className='relative xs:w-[80%]'>
-          <Image src={platform} alt="" className='' />
+            <div className="relative max-h-[529px] max-w-[424px]  xs:w-[80%]">
+            <Image src={will} alt="" className='xs:w-full xl:w-[100%] w-[100%] rounded-md object-cover overflow-hidden '/>
+
           <Image src={img} alt="" className='absolute  sm:left-[-10%] sm:max-w-[50%] xs:left-[-10%] xs:max-w-[50%] top-[14%] left-[-29%]'/>
   <Image src={lock} alt="" className='absolute sm:max-w-[10%] xs:max-w-[10%] sm:left-[-1%] xs:left-[-6%]  bottom-[20%]  left-[-16%]'/>
   <Image src={review} alt="" className='absolute sm:max-w-[30%] sm:right-[-10%] xs:max-w-[40%] right-[-16%] bottom-[10%]'/>

@@ -22,8 +22,8 @@ import FAQ from "../FAQ/Page"
 const Page:React.FC = () => {
     const decorationImages = [
         { src: vector1, alt: "Protect Your Icon", styles: "xs:max-w-[50%] sm:left-[-10%] sm:max-w-[35%]  absolute top-[33%] left-[-22%]" },
-        { src: vector2, alt: "Safety Icon", styles: "absolute xs:max-w-[20%] sm:max-w-[12%] left-[-9%] xl:left-[-3%] bottom-[10%]" },
-        { src: vector3, alt: "Tick Icon", styles: "absolute xs:max-w-[20%] sm:max-w-[10%] top-[6%] right-[6%]" },
+        { src: vector2, alt: "Safety Icon", styles: "absolute xs:max-w-[20%] sm:max-w-[12%] left-[-9%] xl:left-[-7%] bottom-[10%]" },
+        { src: vector3, alt: "Tick Icon", styles: "absolute xs:max-w-[20%] sm:max-w-[10%] top-[6%] right-[-5%]" },
         { src: vector4, alt: "Legally Icon", styles: "absolute sm:right-[-8%] sm:max-w-[30%] xs:max-w-[40%] right-[-16%] bottom-[10%]" },
       ];
   return (
