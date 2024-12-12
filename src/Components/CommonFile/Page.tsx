@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import img1 from "../../../public/assets/svg/Vector1.svg"
+import img1 from "../../../public/assets/svg/Vector1.svg" 
 interface HeroProps {
     title: React.ReactNode; // Allows JSX or plain text
     subtitle: React.ReactNode;
