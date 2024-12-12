@@ -136,15 +136,15 @@ That’s Right For You</h1>
       <div className="flex   xs:flex-col  sm:items-center justify-between gap-6 w-full ">
 
         {/* Basic Plan */}
-        <div className='max-w-[380px] py-4 max-h-[600px]'>
-        <div className="bg-white w-full h-full  shadow-md rounded-lg pt-4 xs:pt-0 p-4 pb-0 text-center">
+        <div className='max-w-[380px] py-4  max-h-[600px]  '>
+        <div className="bg-white w-full h-full  shadow-md rounded-lg p-4 pt-4  text-center">
           <h3 className="text-xl font-inter font-bold text-gray-800">Basic</h3>
           <p className="text-[18px] font-medium font-inter text-[#A6A6A6] mt-3">A simple solution for creating and storing your will securely.</p>
           <div className='relative'>
        <span className='absolute font-inter left-[30%] top-0'>£</span>
           <p className="text-[40px] xl:text-[50px] font-inter justify-center font-semibold text-gray-800 mt-6 sm:mt-2 xs:mt-2  ">99.99</p>
           </div>
-         <div className='bg-[#F9FAFB] mt-6 sm:mt-2 xs:mt-2 flex  flex-col p-4'>
+         <div className='bg-[#F9FAFB] rounded-xl mt-6 sm:mt-2 xs:mt-2 flex  flex-col p-4'>
          <ul className="    flex  flex-col gap-4">
             <li className="flex items-center  sm:text-[14px]font-inter gap-4"><Image src={tick} alt="" /> Secure Wills</li>
             <li className="flex items-center  sm:text-[14px] font-inter  gap-4"><Image src={tick} alt="" />Legal Review</li>
@@ -163,7 +163,7 @@ That’s Right For You</h1>
 
         {/* Premium Plan */}
         <div className='max-w-[380px] max-h-[692px] min-h-[610px]  '>
-        <div className="bg-[#54BD95] w-full h-full pt-4 xs:pt-0 shadow-md rounded-lg p-4  text-center">
+        <div className="bg-[#54BD95] w-full h-full pt-4  shadow-md rounded-lg p-4  text-center">
           <h3 className="text-xl font-bold font-inter text-white">Premium</h3>
           <p className="text-[18px] font-medium font-inter text-white mt-3">Includes all Basic features plus legal review and priority support.</p>
           <div className='relative'>
@@ -191,14 +191,14 @@ That’s Right For You</h1>
        
 
         <div className='max-w-[380px] py-4  max-h-[600px]  '>
-        <div className="bg-white w-full h-full  shadow-md rounded-lg p-4 pt-4 xs:pt-0  text-center">
+        <div className="bg-white w-full h-full  shadow-md rounded-lg p-4 pt-4   text-center">
           <h3 className="text-xl font-inter font-bold text-gray-800">Pro</h3>
           <p className="text-[18px] font-medium font-inter text-[#A6A6A6] mt-3">All features, including advanced asset tracking and family management.</p>
           <div className='relative'>
        <span className='absolute font-inter left-[27%]  top-0'>£</span>
           <p className="text-[40px] xl:text-[50px] font-inter justify-center font-semibold text-[#191A15] mt-6 sm:mt-2 xs:mt-2  ">299.99</p>
           </div>
-           <div className='mt-6 sm:mt-2 xs:mt-2 p-4 bg-[#F9FAFB]'>
+           <div className='mt-6 sm:mt-2 xs:mt-2 p-4 rounded-xl bg-[#F9FAFB]'>
           <ul className="   flex  flex-col gap-4">
             <li className="flex items-center  sm:text-[14px]  font-inter gap-4"><Image src={tick} alt="" /> All the features of pro plan</li>
             <li className="flex items-center  sm:text-[14px]font-inter gap-4"><Image src={tick} alt="" /> Secure Wills</li>

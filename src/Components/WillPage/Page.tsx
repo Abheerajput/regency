@@ -39,7 +39,7 @@ const Will :React.FC = () => {
             </div>
             <div className='w-[50%] items-center xs:w-full  xs:justify-center flex justify-end'>
             <div className="relative max-h-[529px] max-w-[424px]  xs:w-[80%]">
-            <Image src={will} alt="" className='xs:w-full xl:w-[100%] w-[100%] rounded-md object-cover overflow-hidden '/>
+            <Image src={will} alt="" className='xs:w-full xl:w-[100%] w-[100%] h-[100%] rounded-md object-cover overflow-hidden '/>
 
           <Image src={img} alt="" className='absolute  sm:left-[-10%] sm:max-w-[50%] xs:left-[-10%] xs:max-w-[50%] top-[14%] left-[-29%]'/>
   <Image src={lock} alt="" className='absolute sm:max-w-[10%] xs:max-w-[10%] sm:left-[-1%] xs:left-[-6%]  bottom-[20%]  left-[-16%]'/>

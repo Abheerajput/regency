@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   experimental: {
     appDir: true, // Enable app directory support
+
   },
   /* config options here */
 };

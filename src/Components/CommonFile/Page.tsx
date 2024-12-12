@@ -28,11 +28,11 @@ const Hero: React.FC<HeroProps> = ({
   decorationImages,
 }) => {
   return (
-    <div className="xs:px-[3%] py-[2rem]  sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[9%] bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
-      <div className="w-full flex xs:flex-col justify-between  gap-12  xs:px-4">
+    <div className="xs:px-[3%]  py-10  sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[9%] bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
+      <div className="w-full flex xs:flex-col justify-between    xs:px-4">
         <div className="w-[50%] xs:w-full">
           <div className="relative">
-            <h1 className="lg:text-[64px] xl:text-[64px] md:text-[40px] sm:text-[35px] xs:text-[30px] font-inter font-bold text-[#191A15]">
+            <h1 className="lg:text-[64px] xl:text-[64px] md:text-[55px] sm:text-[55px] xs:text-[30px] font-inter font-bold text-[#191A15]">
               {title}
             </h1>
             <Image src={img1} alt="Vector Decoration" />

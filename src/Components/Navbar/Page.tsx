@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
           <div className="flex w-full xs:flex-col py-4 xl:py-7 items-center justify-between">
       {/* Logo */}
       <div className="max-w-[30%] sm:min-w-[10%] xs:items-center xs:mb-3 flex justify-between xs:min-w-[100%]">
-        <Link href="/">
+        <Link href="/home">
         
         <Image src={logo} alt="Logo" className="md:w-2/3 sm:w-2/3" />
         </Link>
@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
         <ul className="flex xs:flex-wrap items-center lg:gap-10 xl:gap-14 justify-between gap-6">
         
           <li className="text-[#898989] font-inter font-medium hover:text-black">
-          <Link href="/">
+          <Link href="/home">
             Home
             </Link>
           </li>
@@ -58,10 +58,14 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
           <li className="text-[#898989] font-inter font-medium hover:text-black">
+            <Link href="/trusts">
             Trusts
+            </Link>
           </li>
           <li className="text-[#898989] font-inter font-medium hover:text-black">
-            Calculators
+            <Link href="/">
+            Calculators</Link>
+           
           </li>
         
           <li className="text-[#898989] font-inter font-medium hover:text-black">

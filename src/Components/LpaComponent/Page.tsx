@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import correct from "../../../public/assets/svg/Correct.svg"
-import lpaimg from "../../../public/assets/svg/Lpa.svg"
+import lpaimg from "../../../public/assets/svg/lpamainimg.png"
 import { CiCircleCheck } from "react-icons/ci";
 import img from "../../../public/assets/svg/15minutes.svg"
 import review from "../../../public/assets/svg/Expert.svg"
