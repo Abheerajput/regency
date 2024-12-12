@@ -15,7 +15,7 @@ const Will :React.FC = () => {
   
     <div className='bg-[#F9F8FE] py-10 xs:px-[3%] sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[8%] bg-gradient-to-r  from-[#FAF1DF] to-[#E2F3EB]  '>
          <div className=' '>
-        <div className='w-full xs:gap-6 xs:flex-col py-12 xs:py-2 flex justify-between '>
+        <div className='w-full xs:gap-6 xs:flex-col  xs:py-2 flex justify-between '>
             <div className='w-[50%] xs:w-full'>
                 <h1 className='font-inter xl:text-[64px] py-4 lg:text-[45px] md:text-[40px] sm:text-[35px] xs:text-[30px] font-bold text-[#191A15]'>Create a Will That’s Truly Yours</h1>
                 <div className='flex flex-col gap-6'>

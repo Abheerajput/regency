@@ -28,16 +28,16 @@ const Hero: React.FC<HeroProps> = ({
   decorationImages,
 }) => {
   return (
-    <div className="xs:px-[3%] xl:pt-[5rem] py-6 xl:pb-[0rem] sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[8%] bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
-      <div className="w-full flex xs:flex-col justify-between gap-4 pb-8 xs:px-4">
+    <div className="xs:px-[3%] py-[2rem]  sm:px-[5%] md:px-[8%] lg:px-[8%] xl:px-[9%] bg-gradient-to-r from-[#FAF1DF] to-[#E2F3EB]">
+      <div className="w-full flex xs:flex-col justify-between  gap-12 pb-8 xs:px-4">
         <div className="w-[50%] xs:w-full">
           <div className="relative">
-            <h1 className="lg:text-[50px] xl:text-[60px] md:text-[40px] sm:text-[35px] xs:text-[30px] font-inter font-bold text-[#191A15]">
+            <h1 className="lg:text-[64px] xl:text-[64px] md:text-[40px] sm:text-[35px] xs:text-[30px] font-inter font-bold text-[#191A15]">
               {title}
             </h1>
             <Image src={img1} alt="Vector Decoration" />
           </div>
-          <p className="font-inter py-4 font-medium xl:text-[20px] text-[18px]">
+          <p className="font-inter py-6 font-medium text-[20px] ">
             {subtitle}
           </p>
           <div className="flex pt-6 gap-6 items-center">
@@ -61,7 +61,7 @@ const Hero: React.FC<HeroProps> = ({
 
         <div className="w-[50%] flex xs:justify-center xs:w-full justify-end">
           <div className="relative  xs:w-[80%]">
-            <Image src={mainImage} alt="Hero Image" className="xs:w-full xl:w-[95%]  w-[85%] rounded-md" />
+            <Image src={mainImage} alt="Hero Image" className="xs:w-full xl:w-[100%]  w-[100%] rounded-md" />
             {decorationImages.map((img, index) => (
               <Image
                 key={index}

@@ -34,40 +34,45 @@ const Navbar: React.FC = () => {
       </div>
 
       <div
-        className={`min-w-[70%] justify-end gap-6 xl:gap-14 lg:gap-10 xs:min-w-[100%] md:flex lg:flex xl:flex sm:flex items-center ${
+        className={`min-w-[70%] ps-4 justify-end gap-6 xl:gap-14 lg:gap-10 xs:min-w-[100%] md:flex lg:flex xl:flex sm:flex items-center ${
           menuOpen ? 'block' : 'hidden'
         } md:block lg:block sm:block xl:block`}
       >
         <ul className="flex xs:flex-wrap items-center lg:gap-10 xl:gap-14 justify-between gap-6">
-          <li className="text-[#898989] font-inter font-semibold hover:text-black">
+        
+          <li className="text-[#898989] font-inter font-medium hover:text-black">
+          <Link href="/">
             Home
+            </Link>
           </li>
+       
+          <li className="text-[#898989] font-inter font-medium hover:text-black">
           <Link href="/will">
-          <li className="text-[#898989] font-inter font-semibold hover:text-black">
+
           Will
-          </li>
           </Link>
-          <li className="text-[#898989] font-inter font-semibold hover:text-black">
+          </li>
+          <li className="text-[#898989] font-inter font-medium hover:text-black">
             <Link href="/lpa">
-            
             LPA
             </Link>
           </li>
-          <li className="text-[#898989] font-inter font-semibold hover:text-black">
+          <li className="text-[#898989] font-inter font-medium hover:text-black">
             Trusts
           </li>
-          <li className="text-[#898989] font-inter font-semibold hover:text-black">
+          <li className="text-[#898989] font-inter font-medium hover:text-black">
             Calculators
           </li>
-          <Link href="/legal">
         
-          <li className="text-[#898989] font-inter font-semibold hover:text-black">
+          <li className="text-[#898989] font-inter font-medium hover:text-black">
+          <Link href="/legal">
+
             Legal Services
-          </li>
           </Link>
+          </li>
           
           <Link href="/signup"
-          className='px-4 sm:px-3 md:px-3 md:py-1 sm:py-1 rounded-3xl py-3 bg-[#54BD95] font-inter text-white font-semibold'
+          className='px-4 sm:px-3 md:px-3 md:py-1 sm:py-1 rounded-3xl py-3 bg-[#54BD95] font-inter text-white font-medium'
           > Get Started
           </Link>
          
