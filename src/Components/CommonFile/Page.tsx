@@ -59,10 +59,11 @@ const Hero: React.FC<HeroProps> = ({
           </div>
         </div>
 
-        <div className="w-[50%] flex xs:justify-center xs:w-full justify-end">
-        <div className="relative max-h-[529px] max-w-[424px ]  xs:w-[80%]">
-        <Image src={mainImage} alt="Hero Image" className="xs:w-full xl:w-[100%]  w-[100%] rounded-md object-cover " />
+        <div className='w-[50%] items-center xs:w-full  xs:justify-center flex justify-end'>
+            <div className="relative min-h-[528.99px] max-h-[529px] max-w-[424px]  xs:w-[80%]">
+            <Image src={mainImage} alt="" className='xs:w-full xl:w-[100%] w-[100%] h-[100%] rounded-md object-cover overflow-hidden '/>
 
+          
             {decorationImages.map((img, index) => (
               <Image
                 key={index}

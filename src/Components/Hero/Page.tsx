@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../CommonFile/Page";
 
-import mainImage from "../../../public/assets/svg/Hero.svg";
+import mainImage from "../../../public/assets/svg/Hero.png";
 import vector1 from "../../../public/assets/svg/ProtectYour.svg";
 import vector2 from "../../../public/assets/svg/Safety.svg";
 import vector3 from "../../../public/assets/svg/tick.svg";

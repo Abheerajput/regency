@@ -5,7 +5,7 @@ import img1 from "../../../public/assets/svg/lessonimg1.svg"
 import img2 from "../../../public/assets/svg/robot.svg"
 import img from "../../../public/assets/svg/Highlish.svg"
 import img3 from "../../../public/assets/svg/track.svg"
-import mainImage from "../../../public/assets/svg/legalmainimg.png";
+import mainImage from "../../../public/assets/svg/legalPerson.png";
 import vector1 from "../../../public/assets/svg/15minutes.svg";
 import vector2 from "../../../public/assets/svg/Safety.svg";
 import vector3 from "../../../public/assets/svg/tick.svg";
@@ -23,7 +23,6 @@ const Page:React.FC = () => {
     const decorationImages = [
         { src: vector1, alt: "Protect Your Icon", styles: "xs:max-w-[50%] sm:left-[-10%] sm:max-w-[35%]  absolute top-[33%] left-[-22%]" },
         { src: vector2, alt: "Safety Icon", styles: "absolute xs:max-w-[20%] sm:max-w-[12%] left-[-9%] xl:left-[-7%] bottom-[10%]" },
-        { src: vector3, alt: "Tick Icon", styles: "absolute xs:max-w-[20%] sm:max-w-[10%] top-[6%] right-[-5%]" },
         { src: vector4, alt: "Legally Icon", styles: "absolute sm:right-[-8%] sm:max-w-[30%] xs:max-w-[40%] right-[-16%] bottom-[10%]" },
       ];
   return (

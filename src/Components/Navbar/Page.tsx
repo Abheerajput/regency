@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
         <ul className="flex xs:flex-wrap items-center lg:gap-10 xl:gap-14 justify-between gap-6">
         
           <li className="text-[#898989] font-inter font-medium hover:text-black">
-          <Link href="/home">
+          <Link href="/">
             Home
             </Link>
           </li>
