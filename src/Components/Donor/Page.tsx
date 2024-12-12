@@ -632,7 +632,7 @@ const handleAttorney = () => {
       You can add up to 5 people to be notified about the LPA application.
     </p>
     <div className="flex flex-col ">
-      <label htmlFor="" className="py-4 font-inter font-medium text-[#191A15]">Enter Person Name</label>
+      <label htmlFor="" className="py-4 font-inter font-semibold text-[#191A15]">Enter Person Name</label>
       <input type="text" className="py-4 border-[#C7C8C7] rounded-[8px] "/>
     </div>
     <h1 className="py-3 font-inter flex gap-4 text-[20px] font-medium text-[#666666]">
@@ -719,48 +719,48 @@ attorneys.</p>
  <h2 className="text-[30px] font-inter font-bold mb-4">Final Check: LPA Details</h2>
  <form className="py-4">
   <div className="pb-4">
-      <label htmlFor="" className="xl:text-[25px]  font-medium text-[18px] text-[#191A15] font-inter">Type of LPA</label>
+      <label htmlFor="" className="xl:text-[25px]  font-semibold text-[18px] text-[#191A15] font-inter">Type of LPA</label>
       <input
         type="text"
         placeholder="Property and finance"
-        className="input-field rounded-[8px] my-[16px] font-inter border-[#C5C7C6] py-3"
+        className="input-field rounded-[8px] font-semibold my-[16px] font-inter border-[#C5C7C6] py-3"
       />
 
   </div>
    <div className="flex w-full gap-4 justify-between ">
      <span className="w-1/2">
-       <label htmlFor="" className="xl:text-[25px]  font-medium text-[18px] text-[#191A15] font-inter">Donor Name</label>
+       <label htmlFor="" className="xl:text-[25px]  font-semibold text-[18px] text-[#191A15] font-inter">Donor Name</label>
        <input
          type="text"
          placeholder="Mr. John Bee"
-         className="input-field my-[16px] font-inter rounded-[8px] border-[#C5C7C6] py-3"
+         className="input-field my-[16px] font-semibold font-inter rounded-[8px] border-[#C5C7C6] py-3"
        />
      </span>
      <span className="w-1/2">
-       <label htmlFor="" className="xl:text-[25px]  text-[18px] font-medium text-[#191A15] font-inter">Donor Date of Birth</label>
+       <label htmlFor="" className="xl:text-[25px]  text-[18px] font-semibold text-[#191A15] font-inter">Donor Date of Birth</label>
        <input
          type="date"
          placeholder="1 January 1965"
-         className="input-field rounded-[8px] my-[16px] font-inter border-[#C5C7C6] py-3"
+         className="input-field font-semibold rounded-[8px] my-[16px] font-inter border-[#C5C7C6] py-3"
        />
      </span>
    </div>
    
   <div className="flex gap-4 w-full">
 <span className="w-1/2">
-<label htmlFor="" className="xl:text-[25px]   font-medium text-[18px] text-[#191A15] font-inter">Donor Email Address</label>
+<label htmlFor="" className="xl:text-[25px]   font-semibold text-[18px] text-[#191A15] font-inter">Donor Email Address</label>
        <input
          type="email"
          placeholder="h.john@gmail.com"
-         className="input-field rounded-[8px] my-[16px] font-inter border-[#C5C7C6] py-3"
+         className="input-field font-semibold rounded-[8px] my-[16px] font-inter border-[#C5C7C6] py-3"
        />
 </span>
       <span className="w-1/2">
-      <label htmlFor="" className="xl:text-[25px]   font-medium text-[18px] text-[#191A15] font-inter">Sign</label>
+      <label htmlFor="" className="xl:text-[25px]   font-semibold text-[18px] text-[#191A15] font-inter">Sign</label>
        <input
          type="text"
          placeholder="Yes"
-         className="input-field rounded-[8px] my-[16px] font-inter border-[#C5C7C6] py-3"
+         className="input-field font-semibold rounded-[8px] my-[16px] font-inter border-[#C5C7C6] py-3"
        />
       </span>
        
@@ -770,7 +770,7 @@ attorneys.</p>
      <input
        type="text"
        placeholder="12 Ridings Avenue, London, N21 2EL"
-       className="input-field py-3 my-[16px] font-inter rounded-[8px] border-[#C5C7C6]  font-medium "
+       className="input-field py-3 my-[16px] font-inter rounded-[8px] border-[#C5C7C6]  font-semibold"
      />
    </div>
    <div className="">
@@ -778,13 +778,13 @@ attorneys.</p>
      <input
        type="text"
        placeholder="As soon as it's registered"
-       className="input-field py-3 my-[16px] font-inter  rounded-[8px] border-[#C5C7C6] font-medium "
+       className="input-field py-3 my-[16px] font-inter  rounded-[8px] border-[#C5C7C6] font-semibold "
      />
    </div>
 
    <div className="flex w-full gap-4 justify-between ">
      <span className="w-1/2">
-       <label htmlFor="" className="xl:text-[25px]   font-medium text-[18px] text-[#191A15] font-inter">Attorney Name</label>
+       <label htmlFor="" className="xl:text-[25px]   font-semibold text-[18px] text-[#191A15] font-inter">Attorney Name</label>
        <input
          type="text"
          placeholder="Miss Medi Barand"
@@ -792,7 +792,7 @@ attorneys.</p>
        />
      </span>
      <span className="w-1/2">
-       <label htmlFor="" className="xl:text-[25px]   text-[18px] font-medium text-[#191A15] font-inter">Attorney Date of Birth</label>
+       <label htmlFor="" className="xl:text-[25px]   text-[18px] font-semibold text-[#191A15] font-inter">Attorney Date of Birth</label>
        <input
          type="date"
          placeholder="1 January 1965"
@@ -814,7 +814,7 @@ attorneys.</p>
      <input
        type="text"
        placeholder="No replacement attorneys"
-       className="input-field py-3 my-[16px] font-inter font-medium  rounded-[8px] border-[#C5C7C6]"
+       className="input-field py-3 my-[16px] font-inter font-semibold  rounded-[8px] border-[#C5C7C6]"
      />
    </div>
    <div className="">
@@ -822,7 +822,7 @@ attorneys.</p>
      <input
        type="text"
        placeholder="Not added"
-       className="input-field py-3 my-[16px] font-inter font-medium rounded-[8px] border-[#C5C7C6]"
+       className="input-field py-3 my-[16px] font-inter font-semibold rounded-[8px] border-[#C5C7C6]"
      />
    </div>
  
